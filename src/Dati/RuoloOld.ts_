@@ -1,0 +1,334 @@
+import { IVoce } from "../interfacce/IVoce";
+
+export const Ruolo:Array<IVoce>=[
+    {
+        id: 1,
+        descrizione : "Aeroportuali",
+    
+    },
+    {
+        id: 2,
+        descrizione : "Antincendio Navale",
+    
+    },
+    {
+        id: 3,
+        descrizione : "Autista II",
+    
+    },
+    {
+        id: 4,
+        descrizione : "Autista II TNP",
+    
+    },
+    {
+        id: 5,
+        descrizione : "Autista III",
+    
+    },
+    {
+        id: 6,
+        descrizione : "Autista IV",
+    
+    },
+    {
+        id: 7,
+        descrizione : "Autista Movimento Terra",
+    
+    },
+    {
+        id: 8,
+        descrizione : "Autogrù",
+    
+    },
+    {
+        id: 9,
+        descrizione : "Autoprotezione Ambiente Acquatico",
+    
+    },
+    {
+        id: 10,
+        descrizione : "Autoscala",
+    
+    },
+    {
+        id: 11,
+        descrizione : "C.A.T.",
+    
+    },
+    {
+        id: 12,
+        descrizione : "Cinofili",
+    
+    },
+    {
+        id: 13,
+        descrizione : "D.O.S.",
+    
+    },
+    {
+        id: 14,
+        descrizione : "Elicotteristi e Piloti D'Aereo",
+    
+    },
+    {
+        id: 15,
+        descrizione : "Istruttore ATP",
+    
+    },
+    {
+        id: 16,
+        descrizione : "Istruttore Ginnico",
+    
+    },
+    {
+        id: 17,
+        descrizione : "Istruttore Patenti",
+    
+    },
+    {
+        id: 18,
+        descrizione : "Istruttore Professionale",
+    
+    },
+    {
+        id: 19,
+        descrizione : "Istruttore SAF Basico",
+    
+    },
+    {
+        id: 20,
+        descrizione : "Istruttore TPSS",
+    
+    },
+    {
+        id: 21,
+        descrizione : "Laboratorio A.R.A.",
+    
+    },
+    {
+        id: 22,
+        descrizione : "M.S.L.",
+    
+    },
+    {
+        id: 23,
+        descrizione : "Nautici",
+    
+    },
+    {
+        id: 24,
+        descrizione : "NBCR II",
+    
+    },
+    {
+        id: 25,
+        descrizione : "NBCR III",
+    
+    },
+    {
+        id: 26,
+        descrizione : "Patente Nautica I",
+    
+    },
+    {
+        id: 27,
+        descrizione : "Patente Nautica II",
+    
+    },
+    {
+        id: 28,
+        descrizione : "Patente PWC",
+    
+    },
+    {
+        id: 29,
+        descrizione : "Polizia Giudiziaria",
+    
+    },
+    {
+        id: 30,
+        descrizione : "Portuali",
+    
+    },
+    {
+        id: 31,
+        descrizione : "Prevenzione Incendi 1",
+    
+    },
+    {
+        id: 32,
+        descrizione : "Prevenzione Incendi 2",
+    
+    },
+    {
+        id: 33,
+        descrizione : "Prevenzione Incendi 3",
+    
+    },
+    {
+        id: 34,
+        descrizione : "Prevenzione Incendi 4",
+    
+    },
+    {
+        id: 35,
+        descrizione : "Prevenzione Incendi 5",
+    
+    },
+    {
+        id: 36,
+        descrizione : "Prevenzione Incendi 6",
+    
+    },
+    {
+        id: 37,
+        descrizione : "Puntellamenti",
+    
+    },
+    {
+        id: 38,
+        descrizione : "Radioriparatori",
+    
+    },
+    {
+        id: 39,
+        descrizione : "SAF 1B",
+    
+    },
+    {
+        id: 40,
+        descrizione : "SAF 1B Flu/Sa",
+    
+    },
+    {
+        id: 41,
+        descrizione : "SAF 1B Fluviale",
+    
+    },
+    {
+        id: 42,
+        descrizione : "SAF 2A",
+    
+    },
+    {
+        id: 43,
+        descrizione : "SAF 2A Flu/Sa",
+    
+    },
+    {
+        id: 44,
+        descrizione : "SAF 2A Fluviale",
+    
+    },
+    {
+        id: 45,
+        descrizione : "SAF 2B",
+    
+    },
+    {
+        id: 46,
+        descrizione : "SAF 2B Flu/Sa",
+    
+    },
+    {
+        id: 47,
+        descrizione : "SAF 2B Fluviale",
+    
+    },
+    {
+        id: 48,
+        descrizione : "SAF Avanzato",
+    
+    },
+    {
+        id: 49,
+        descrizione : "SAF Avanzato Flu/Sa",
+    
+    },
+    {
+        id: 50,
+        descrizione : "SAF Avanzato Fluviale",
+    
+    },
+    {
+        id: 51,
+        descrizione : "SAF Basico",
+    
+    },
+    {
+        id: 52,
+        descrizione : "SAF Basico Flu/Sa",
+    
+    },
+    {
+        id: 53,
+        descrizione : "SAF Basico Fluviale",
+    
+    },
+    {
+        id: 54,
+        descrizione : "Sala Operativa",
+    
+    },
+    {
+        id: 55,
+        descrizione : "Salvamento a nuoto",
+    
+    },
+    {
+        id: 56,
+        descrizione : "SAPR",
+    
+    },
+    {
+        id: 57,
+        descrizione : "Scorta Tecnica",
+    
+    },
+    {
+        id: 58,
+        descrizione : "Soccorritore Aeroportuale",
+    
+    },
+    {
+        id: 59,
+        descrizione : "Sommozzatori",
+    
+    },
+    {
+        id: 60,
+        descrizione : "Tas I",
+    
+    },
+    {
+        id: 61,
+        descrizione : "Tas II",
+    
+    },
+    {
+        id: 62,
+        descrizione : "TPSS",
+    
+    },
+    {
+        id: 63,
+        descrizione : "Usar-L",
+    
+    },
+    {
+        id: 64,
+        descrizione : "Usar-M",
+    
+    },
+    {
+        id: 65,
+        descrizione : "Istruttore Salvamento a Nuoto",
+    
+    },
+    {
+        id: 66,
+        descrizione : "NIAT",
+    
+    }
+]

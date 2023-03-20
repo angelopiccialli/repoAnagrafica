@@ -1,0 +1,183 @@
+import React, { useState } from "react";
+import { IFattura } from "../interfacce/IFattura";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { Genere } from '../Dati/Genere';
+import { Qualifica } from '../Dati/Qualifica';
+import { Ruolo } from '../Dati/Ruolo';
+
+
+const orange: any = {
+    backgroundColor: "orange"
+};
+
+
+interface IAddFattura {
+    metodoAggiungi: (newFattura: IFattura) => void
+}
+
+export const Inserisci: React.FC<IAddFattura> = ({ metodoAggiungi }) => {
+
+    const [descr, setDescr] = useState<string>("");
+    const [importo, setImporto] = useState<number>(0);
+
+    const [startDate, setStartDate] = useState(new Date());
+    const [reg, setREg] = useState<number>(0);
+
+
+    return (
+
+            <div style={orange}>
+                <h2>ANAGRAFICA</h2>
+                    <div>
+                        <label htmlFor="">Codice Fiscale</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+                    </div>
+
+                    <div>
+                        <label htmlFor="">Nome</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        /><span>{descr}</span>
+
+                        <label htmlFor="">Cognome</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+                    </div>
+
+                    <div>
+                        <label htmlFor="">Data di Nascita</label>
+                        <DatePicker selected={startDate} onChange={date => date && setStartDate(date)} />
+
+                        <label htmlFor="">Luogo di Nascita</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="">Genere</label>
+                        <select onChange={(tagreg) => { setREg(parseInt(tagreg.target.value)) }}>
+                            <option value="0">Seleziona Genere</option>
+                            {
+                                Genere.map(
+                                    (ge) => {
+                                        return <option value={ge.id} key={ge.id}>{ge.descrizione}</option>
+                                    }
+                                )
+                            }
+                        </select>
+
+                        <label htmlFor="">Indirizzo</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }} />
+                        <span>{descr}</span>
+
+
+                        <label htmlFor="">Comune</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+
+                        <label htmlFor="">Provincia</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+
+                    </div>
+
+                    <div>
+                        <label htmlFor="">CAP</label>
+                        <input
+                            type="text"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+
+
+
+                        <label htmlFor="">Qualifica</label>
+                        <select onChange={(tagreg) => { setREg(parseInt(tagreg.target.value)) }}>
+                            <option value="0">Seleziona Qualifica</option>
+                            {
+                                Qualifica.map(
+                                    (qa) => {
+                                        return <option value={qa.id} key={qa.id}>{qa.descrizione}</option>
+                                    }
+                                )
+                            }
+                        </select>
+
+
+
+                        <label htmlFor="">Ruolo</label>
+                        <select onChange={(tagreg) => { setREg(parseInt(tagreg.target.value)) }}>
+                            <option value="0">Seleziona Ruolo</option>
+                            {
+                                Ruolo.map(
+                                    (ru) => {
+                                        return <option value={ru.id} key={ru.id}>{ru.descrizione}</option>
+                                    }
+                                )
+                            }
+                        </select>
+
+
+                        <label htmlFor="">email</label>
+                        <input
+                            type="text"
+                            placeholder="E-mail"
+                            value={descr}
+                            onChange={(tagdescr) => { setDescr(tagdescr.target.value) }}
+                        />
+                        <span>{descr}</span>
+
+                        <label htmlFor="">Digita importo</label>
+                        <input
+                            type="number"
+                            value={importo}
+                            onChange={(tagimporto) => { setImporto(parseInt(tagimporto.target.value)) }}
+                        />
+                        <span>{importo}</span>
+
+                    </div>
+                <div>
+                    <button
+                        onClick={
+                            () => {
+                                let nuovafattura: IFattura = {
+                                    importo: importo,
+                                    descrizione: descr,
+                                    numero: 0
+                                }
+                                metodoAggiungi(nuovafattura);
+                            }
+                        }
+                    >Inserisci fattura</button>
+                </div>
+            </div>
+    )
+
+}
